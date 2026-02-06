@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+/* ================= GLOBAL RESET ================= */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+/* ================= BASE ================= */
+body {
+  @apply bg-slate-950 text-white antialiased;
+  font-family: ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/* ================= SCROLLBAR ================= */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155; /* slate-700 */
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569; /* slate-600 */
+}
+
+/* ================= INPUT FIXES ================= */
+input,
+textarea,
+button {
+  outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #64748b; /* slate-500 */
+}
+
+/* ================= CHAT UX ================= */
+.chat-bubble {
+  @apply max-w-xs p-2 rounded-lg text-sm;
+}
+
+.chat-me {
+  @apply ml-auto bg-blue-600 text-white;
+}
+
+.chat-other {
+  @apply bg-slate-800 text-white;
+}
